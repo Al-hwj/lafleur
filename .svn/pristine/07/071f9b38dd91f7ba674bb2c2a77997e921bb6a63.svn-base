@@ -1,0 +1,105 @@
+html {
+font:normal 100%/1.2em "Trebuchet MS",Verdana,Helvetica,Arial,sans-serif;
+}
+
+body{
+color:white;
+background-image:url('../images/wall1.jpg');
+background-repeat:no-repeat;
+background-attachment:fixed;
+}
+fieldset {
+ 	display:block;
+ 	width:50%;
+	border: 1px dotted #353535;
+	padding:2px;
+ 	overflow:hidden;                   
+}
+
+label {
+	background:transparent none;
+	display: block;
+	width: 20%;
+	float: left;
+	padding-right: 1%;
+	text-align: left;
+}
+
+.erreur{ 
+   background-color:rgb(237,210,229);
+   color:rgb(203,28,128);
+   font-size:1.1em;
+   width:84%;
+}
+.message{ 
+   background-color:rgb(99, 184, 255);
+   color:rgb(0,0,205);
+   font-size:1.1em;
+   width:84%;
+}
+
+#bandeau {
+
+}
+
+#menu{
+height: 1.8em ;
+}
+
+#categories{
+float:left;
+}
+
+#produits{
+padding:0 150px;
+margin-left: 10px;
+}
+
+#contenu{
+
+}
+
+#menu li {
+		list-style-type: none;
+		list-style-image:none;
+		float: left ; 
+		text-align: center;
+    width: 190px ; 
+    border: 1px solid #600 ; 
+    color: #fff ; 
+    background-image:url('../images/wall2.jpg');
+}
+
+#menu li a , #categories li a {
+		text-decoration:none;
+}
+
+#categories li {
+		list-style-type: none;
+		list-style-image:none;
+		text-align: center;
+    width: 190px ; 
+    border: 1px solid #600 ; 
+    color: white ; 
+    background-image:url('../images/wall2.jpg');
+}
+
+a:visited{
+    color: white ;
+}
+
+#produits li, #produits li a {
+		list-style-type: none;
+		list-style-image:none;
+		display:inline; 
+    width:175px;
+    text-align:center;
+    height:205px;
+    color: white ; 
+    font: 1em "Trebuchet MS",Arial,sans-serif ;
+}
+
+#produits ul{
+}
+
+

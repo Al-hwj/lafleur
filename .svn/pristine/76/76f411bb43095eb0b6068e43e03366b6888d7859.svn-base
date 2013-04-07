@@ -1,0 +1,154 @@
+-- phpMyAdmin SQL Dump
+-- version 3.5.1
+-- http://www.phpmyadmin.net
+--
+-- Client: localhost
+-- Généré le: Lun 01 Avril 2013 à 16:03
+-- Version du serveur: 5.5.24-log
+-- Version de PHP: 5.4.3
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Base de données: `lafleurv3`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `administrateur`
+--
+
+CREATE TABLE IF NOT EXISTS `administrateur` (
+  `login` varchar(20) NOT NULL,
+  `mdp` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `administrateur`
+--
+
+INSERT INTO `administrateur` (`login`, `mdp`) VALUES
+('admin', 'admin');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `categorie`
+--
+
+CREATE TABLE IF NOT EXISTS `categorie` (
+  `cat_code` char(3) NOT NULL DEFAULT '',
+  `cat_libelle` varchar(50) NOT NULL DEFAULT '',
+  PRIMARY KEY (`cat_code`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `categorie`
+--
+
+INSERT INTO `categorie` (`cat_code`, `cat_libelle`) VALUES
+('bul', 'Bulbes'),
+('mas', 'Plantes à massif'),
+('ros', 'Rosiers');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `clients`
+--
+
+CREATE TABLE IF NOT EXISTS `clients` (
+  `clt_login` char(10) NOT NULL,
+  `clt_mdp` char(10) NOT NULL,
+  `clt_nom` char(10) NOT NULL,
+  `clt_adresse` char(20) NOT NULL,
+  `clt_cpostal` int(5) NOT NULL,
+  `clt_tel` int(10) NOT NULL,
+  `clt_email` char(20) NOT NULL,
+  PRIMARY KEY (`clt_login`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `commande`
+--
+
+CREATE TABLE IF NOT EXISTS `commande` (
+  `idCommande` int(30) NOT NULL,
+  `date` date NOT NULL,
+  PRIMARY KEY (`idCommande`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `contenucommande`
+--
+
+CREATE TABLE IF NOT EXISTS `contenucommande` (
+  `idCommande` int(30) NOT NULL,
+  `idClient` varchar(30) NOT NULL,
+  `produit` char(3) NOT NULL,
+  `quantite` int(5) NOT NULL,
+  PRIMARY KEY (`idCommande`,`idClient`,`produit`),
+  KEY `idClient` (`idClient`),
+  KEY `produit` (`produit`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `produits`
+--
+
+CREATE TABLE IF NOT EXISTS `produits` (
+  `pdt_ref` char(3) NOT NULL,
+  `pdt_designation` char(50) NOT NULL,
+  `pdt_prix` int(10) NOT NULL,
+  `pdt_image` char(50) NOT NULL,
+  `pdt_categorie` char(3) NOT NULL,
+  PRIMARY KEY (`pdt_ref`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contraintes pour les tables exportées
+--
+
+--
+-- Contraintes pour la table `clients`
+--
+ALTER TABLE `clients`
+  ADD CONSTRAINT `clients_ibfk_1` FOREIGN KEY (`clt_login`) REFERENCES `contenucommande` (`idClient`);
+
+--
+-- Contraintes pour la table `commande`
+--
+ALTER TABLE `commande`
+  ADD CONSTRAINT `commande_ibfk_1` FOREIGN KEY (`idCommande`) REFERENCES `contenucommande` (`idCommande`);
+
+--
+-- Contraintes pour la table `contenucommande`
+--
+ALTER TABLE `contenucommande`
+  ADD CONSTRAINT `contenucommande_ibfk_3` FOREIGN KEY (`produit`) REFERENCES `produits` (`pdt_ref`),
+  ADD CONSTRAINT `contenucommande_ibfk_1` FOREIGN KEY (`idCommande`) REFERENCES `commande` (`idCommande`),
+  ADD CONSTRAINT `contenucommande_ibfk_2` FOREIGN KEY (`idClient`) REFERENCES `clients` (`clt_login`);
+
+--
+-- Contraintes pour la table `produits`
+--
+ALTER TABLE `produits`
+  ADD CONSTRAINT `produits_ibfk_1` FOREIGN KEY (`pdt_ref`) REFERENCES `contenucommande` (`produit`);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -1,0 +1,1154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project version="2.0.0a12" title="lafleur">
+  <file path="controleurs\c_gestionCompte.php" hash="e006223bc3da12e3bb5f6108b4572998" package="Default">
+    <include line="23" type="Include" package="Default">
+      <name>vues/v_validCommande.php</name>
+    </include>
+    <include line="32" type="Include" package="Default">
+      <name>vues/v_clients.php</name>
+    </include>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file controleurs\c_gestionCompte.php</error>
+    </parse_markers>
+  </file>
+  <file path="controleurs\c_gestionPanier.php" hash="bde09350034bc9ada5e4987b4b89e793" package="Default">
+    <include line="26" type="Include" package="Default">
+      <name>vues/v_panier.php</name>
+    </include>
+    <include line="31" type="Include" package="Default">
+      <name>vues/v_message.php</name>
+    </include>
+    <include line="44" type="Include" package="Default">
+      <name>vues/v_message.php</name>
+    </include>
+    <include line="45" type="Include" package="Default">
+      <name>vues/v_panier.php</name>
+    </include>
+    <include line="55" type="Include" package="Default">
+      <name>vues/v_commande.php</name>
+    </include>
+    <include line="60" type="Include" package="Default">
+      <name>vues/v_message.php</name>
+    </include>
+    <include line="74" type="Include" package="Default">
+      <name>vues/v_message.php</name>
+    </include>
+    <include line="85" type="Include" package="Default">
+      <name>vues/v_validCommande.php</name>
+    </include>
+    <include line="91" type="Include" package="Default">
+      <name>vues/v_commande.php</name>
+    </include>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file controleurs\c_gestionPanier.php</error>
+    </parse_markers>
+  </file>
+  <file path="controleurs\c_gestionProduits.php" hash="adae58cafc8ec70e07dc486322887a10" package="Default">
+    <include line="66" type="Include" package="Default">
+      <name>vues/v_admin_modifier.php</name>
+    </include>
+    <include line="107" type="Include" package="Default">
+      <name>vues/v_admin_ajouter.php</name>
+    </include>
+    <include line="113" type="Include" package="Default">
+      <name>vues/v_admin.php</name>
+    </include>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file controleurs\c_gestionProduits.php</error>
+    </parse_markers>
+  </file>
+  <file path="controleurs\c_validConnexion.php" hash="ece7cfc872bdac653f515d7dc1d9c837" package="Default">
+    <include line="103" type="Include" package="Default">
+      <name>vues/v_connexion.php</name>
+    </include>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file controleurs\c_validConnexion.php</error>
+    </parse_markers>
+  </file>
+  <file path="controleurs\c_voirProduits.php" hash="bef06c6a3309ccb31846ff343a3884c2" package="Default">
+    <include line="20" type="Include" package="Default">
+      <name>vues/v_categories.php</name>
+    </include>
+    <include line="26" type="Include" package="Default">
+      <name>vues/v_categories.php</name>
+    </include>
+    <include line="29" type="Include" package="Default">
+      <name>vues/v_produits.php</name>
+    </include>
+    <include line="40" type="Include" package="Default">
+      <name>vues/v_message.php</name>
+    </include>
+    <include line="45" type="Include" package="Default">
+      <name>vues/v_message.php</name>
+    </include>
+    <include line="48" type="Include" package="Default">
+      <name>vues/v_categories.php</name>
+    </include>
+    <include line="50" type="Include" package="Default">
+      <name>vues/v_produits.php</name>
+    </include>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file controleurs\c_voirProduits.php</error>
+    </parse_markers>
+  </file>
+  <file path="index.php" hash="ed03605c60ca2a67b2c94356b7f06022" package="Default">
+    <include line="13" type="Require Once" package="Default">
+      <name>util/fonctions.inc.php</name>
+    </include>
+    <include line="14" type="Require Once" package="Default">
+      <name>util/class.pdoLafleur.inc.php</name>
+    </include>
+    <include line="24" type="Include" package="Default">
+      <name>vues/v_entete.php</name>
+    </include>
+    <include line="25" type="Include" package="Default">
+      <name>vues/v_bandeau.php</name>
+    </include>
+    <include line="36" type="Include" package="Default">
+      <name>vues/v_accueil.php</name>
+    </include>
+    <include line="38" type="Include" package="Default">
+      <name>controleurs/c_voirProduits.php</name>
+    </include>
+    <include line="40" type="Include" package="Default">
+      <name>controleurs/c_gestionPanier.php</name>
+    </include>
+    <include line="42" type="Include" package="Default">
+      <name>controleurs/c_validConnexion.php</name>
+    </include>
+    <include line="45" type="Include" package="Default">
+      <name>controleurs/c_gestionProduits.php</name>
+    </include>
+    <include line="53" type="Include" package="Default">
+      <name>controleurs/c_gestionCompte.php</name>
+    </include>
+    <include line="60" type="Include" package="Default">
+      <name>vues/v_pied.php</name>
+    </include>
+    <constant namespace="global" line="18" package="Default">
+      <name>HOME</name>
+      <full_name>\HOME</full_name>
+      <value>str_replace('index.php', '', $_SERVER['SCRIPT_NAME'])</value>
+    </constant>
+    <constant namespace="global" line="22" package="Default">
+      <name>ROOT</name>
+      <full_name>\ROOT</full_name>
+      <value>str_replace('index.php', '', $_SERVER['SCRIPT_FILENAME'])</value>
+    </constant>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file index.php</error>
+    </parse_markers>
+  </file>
+  <file path="test\util\fonctionTest.php" hash="75556f5ac5588fa5a8aef71a96607be0" package="Default">
+    <include line="3" type="Require Once" package="Default">
+      <name>../../util/fonctions.inc.php</name>
+    </include>
+    <class final="false" abstract="false" namespace="global" line="8" package="Default">
+      <extends>\PHPUnit_Framework_TestCase</extends>
+      <name>fonctionTest</name>
+      <full_name>\fonctionTest</full_name>
+      <docblock line="5">
+        <description>Classe de test de la classe fonctions n'accédant pas à la base de données.</description>
+        <long-description/>
+      </docblock>
+      <property final="false" static="false" visibility="protected" line="14" namespace="global" package="Default">
+        <name>$object</name>
+        <default/>
+        <docblock line="10">
+          <description>Variable object</description>
+          <long-description/>
+          <tag line="10" name="var" description="" type="\$object">
+            <type by_reference="false">\$object</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="20" package="Default">
+        <name>setUp</name>
+        <full_name>setUp</full_name>
+        <docblock line="16">
+          <description>Sets up the fixture, for example, opens a network connection.</description>
+          <long-description>&lt;p&gt;This method is called before a test is executed.&lt;/p&gt;</long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="28" package="Default">
+        <name>tearDown</name>
+        <full_name>tearDown</full_name>
+        <docblock line="24">
+          <description>Tears down the fixture, for example, closes a network connection.</description>
+          <long-description>&lt;p&gt;This method is called after a test is executed.&lt;/p&gt;</long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="36" package="Default">
+        <name>testIsConnecteAdmin</name>
+        <full_name>testIsConnecteAdmin</full_name>
+        <docblock line="32">
+          <description>Test de la fonction isConnecteAdmin()</description>
+          <long-description/>
+          <tag line="32" name="covers" description="\fonction::isConnecteAdmin" refers="\fonction::isConnecteAdmin"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="45" package="Default">
+        <name>testIsConnecteAdmin2</name>
+        <full_name>testIsConnecteAdmin2</full_name>
+        <docblock line="40">
+          <description>Test de la fonction isConnecteAdmin()</description>
+          <long-description/>
+          <tag line="40" name="var" description="Correspond à la variable de session d'un administrateur" type="\$_SESSION['admin']">
+            <type by_reference="false">\$_SESSION['admin']</type>
+          </tag>
+          <tag line="40" name="covers" description="\fonction::isConnecteAdmin" refers="\fonction::isConnecteAdmin"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="56" package="Default">
+        <name>testInitPanier</name>
+        <full_name>testInitPanier</full_name>
+        <docblock line="50">
+          <description>Test de la fonction initPanier</description>
+          <long-description/>
+          <tag line="50" name="covers" description="\fonction::initPanier" refers="\fonction::initPanier"/>
+          <tag line="50" name="todo" description="Implement testInitPanier()."/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="69" package="Default">
+        <name>testSupprimerPanier</name>
+        <full_name>testSupprimerPanier</full_name>
+        <docblock line="63">
+          <description>Test de la fonction supprimerPanier</description>
+          <long-description/>
+          <tag line="63" name="covers" description="\fonction::supprimerPanier" refers="\fonction::supprimerPanier"/>
+          <tag line="63" name="todo" description="Implement testSupprimerPanier()."/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="83" package="Default">
+        <name>testAjouterAuPanier</name>
+        <full_name>testAjouterAuPanier</full_name>
+        <docblock line="76">
+          <description>Test de la fonction ajouterAuPanier</description>
+          <long-description/>
+          <tag line="76" name="var" description="Correspond à la liste de produit existant dans le panier courant" type="\$_SESSION['produits']">
+            <type by_reference="false">\$_SESSION['produits']</type>
+          </tag>
+          <tag line="76" name="var" description="Correspond au produit à ajouter à la liste des produits du panier courant" type="\$idProduit">
+            <type by_reference="false">\$idProduit</type>
+          </tag>
+          <tag line="76" name="covers" description="\fonction::ajouterAuPanier" refers="\fonction::ajouterAuPanier"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="96" package="Default">
+        <name>testAjouterAuPanier2</name>
+        <full_name>testAjouterAuPanier2</full_name>
+        <docblock line="89">
+          <description>Test de la fonction ajouterAuPanier</description>
+          <long-description/>
+          <tag line="89" name="var" description="Correspond à la liste de produits existant dans le panier courant" type="\$_SESSION['produits']">
+            <type by_reference="false">\$_SESSION['produits']</type>
+          </tag>
+          <tag line="89" name="var" description="Correspond au produit à ajouter à la liste des produits du panier courant" type="\$idProduit">
+            <type by_reference="false">\$idProduit</type>
+          </tag>
+          <tag line="89" name="covers" description="\fonction::ajouterAuPanier" refers="\fonction::ajouterAuPanier"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="108" package="Default">
+        <name>testGetLesIdProduitsDuPanier</name>
+        <full_name>testGetLesIdProduitsDuPanier</full_name>
+        <docblock line="102">
+          <description>Test de la fonction getLesIdProduitsDuPanier</description>
+          <long-description/>
+          <tag line="102" name="var" description="Correspond à la liste de produits existant dans le panier courant" type="\$_SESSION['produits']">
+            <type by_reference="false">\$_SESSION['produits']</type>
+          </tag>
+          <tag line="102" name="covers" description="\fonction::getLesIdProduitsDuPanier" refers="\fonction::getLesIdProduitsDuPanier"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="119" package="Default">
+        <name>testNbProduitsDuPanier</name>
+        <full_name>testNbProduitsDuPanier</full_name>
+        <docblock line="113">
+          <description>Test de la fonction nbProduitsDuPanier</description>
+          <long-description/>
+          <tag line="113" name="var" description="Correspond à la liste de produits existant dans le panier courant" type="\$_SESSION['produits']">
+            <type by_reference="false">\$_SESSION['produits']</type>
+          </tag>
+          <tag line="113" name="covers" description="\fonction::nbProduitsDuPanier" refers="\fonction::nbProduitsDuPanier"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="130" package="Default">
+        <name>testNbProduitsDuPanier2</name>
+        <full_name>testNbProduitsDuPanier2</full_name>
+        <docblock line="124">
+          <description>Test de la fonction nbProduitsDuPanier</description>
+          <long-description/>
+          <tag line="124" name="var" description="Correspond à la liste de produits existant dans le panier courant" type="\$_SESSION['produits']">
+            <type by_reference="false">\$_SESSION['produits']</type>
+          </tag>
+          <tag line="124" name="covers" description="\fonction::nbProduitsDuPanier" refers="\fonction::nbProduitsDuPanier"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="141" package="Default">
+        <name>testRetirerDuPanier</name>
+        <full_name>testRetirerDuPanier</full_name>
+        <docblock line="135">
+          <description>Test de la fonction retirerDuPanier</description>
+          <long-description/>
+          <tag line="135" name="covers" description="\fonction::retirerDuPanier" refers="\fonction::retirerDuPanier"/>
+          <tag line="135" name="todo" description="Implement testRetirerDuPanier()."/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="154" package="Default">
+        <name>testEstUnCp</name>
+        <full_name>testEstUnCp</full_name>
+        <docblock line="148">
+          <description>Test de la fonction estUnCp</description>
+          <long-description/>
+          <tag line="148" name="var" description="Correspond à un code postale à tester" type="\$cp">
+            <type by_reference="false">\$cp</type>
+          </tag>
+          <tag line="148" name="covers" description="\fonction::estUnCp" refers="\fonction::estUnCp"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="165" package="Default">
+        <name>testEstUnCp2</name>
+        <full_name>testEstUnCp2</full_name>
+        <docblock line="159">
+          <description>Test de la fonction estUnCp</description>
+          <long-description/>
+          <tag line="159" name="var" description="Correspond à un code postale à tester" type="\$cp">
+            <type by_reference="false">\$cp</type>
+          </tag>
+          <tag line="159" name="covers" description="\fonction::estUnCp" refers="\fonction::estUnCp"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="176" package="Default">
+        <name>testEstEntier</name>
+        <full_name>testEstEntier</full_name>
+        <docblock line="170">
+          <description>Test de la fonction estEntier</description>
+          <long-description/>
+          <tag line="170" name="var" description="Correspond à un entier à tester" type="\$valeur">
+            <type by_reference="false">\$valeur</type>
+          </tag>
+          <tag line="170" name="covers" description="\fonction::estEntier" refers="\fonction::estEntier"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="187" package="Default">
+        <name>testEstEntier2</name>
+        <full_name>testEstEntier2</full_name>
+        <docblock line="181">
+          <description>Test de la fonction estEntier</description>
+          <long-description/>
+          <tag line="181" name="var" description="Correspond à un entier à tester" type="\$valeur">
+            <type by_reference="false">\$valeur</type>
+          </tag>
+          <tag line="181" name="covers" description="\fonction::estEntier" refers="\fonction::estEntier"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="198" package="Default">
+        <name>testEstUnMail</name>
+        <full_name>testEstUnMail</full_name>
+        <docblock line="192">
+          <description>Test de la fonction estUnMail</description>
+          <long-description/>
+          <tag line="192" name="var" description="Correspond à un email à tester" type="\$mail">
+            <type by_reference="false">\$mail</type>
+          </tag>
+          <tag line="192" name="covers" description="\fonction::estUnMail" refers="\fonction::estUnMail"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="209" package="Default">
+        <name>testEstUnMail2</name>
+        <full_name>testEstUnMail2</full_name>
+        <docblock line="203">
+          <description>Test de la fonction estUnMail</description>
+          <long-description/>
+          <tag line="203" name="var" description="Correspond à un email à tester" type="\$mail">
+            <type by_reference="false">\$mail</type>
+          </tag>
+          <tag line="203" name="covers" description="\fonction::estUnMail" refers="\fonction::estUnMail"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="224" package="Default">
+        <name>testGetErreursSaisieCommande</name>
+        <full_name>testGetErreursSaisieCommande</full_name>
+        <docblock line="214">
+          <description>Test de la fonction getErreursSaisieCommande</description>
+          <long-description/>
+          <tag line="214" name="var" description="Correspond à un nom à tester" type="\$nom">
+            <type by_reference="false">\$nom</type>
+          </tag>
+          <tag line="214" name="var" description="Correspond à une rue à tester" type="\$rue">
+            <type by_reference="false">\$rue</type>
+          </tag>
+          <tag line="214" name="var" description="Correspond à une ville à tester" type="\$ville">
+            <type by_reference="false">\$ville</type>
+          </tag>
+          <tag line="214" name="var" description="Correspond à un code postale à tester" type="\$cp">
+            <type by_reference="false">\$cp</type>
+          </tag>
+          <tag line="214" name="var" description="Correspond à un email à tester" type="\$mail">
+            <type by_reference="false">\$mail</type>
+          </tag>
+          <tag line="214" name="covers" description="\fonction::getErreursSaisieCommande" refers="\fonction::getErreursSaisieCommande"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="243" package="Default">
+        <name>testGetErreursSaisieCommande2</name>
+        <full_name>testGetErreursSaisieCommande2</full_name>
+        <docblock line="233">
+          <description>Test de la fonction getErreursSaisieCommande</description>
+          <long-description/>
+          <tag line="233" name="var" description="Correspond à un nom à tester" type="\$nom">
+            <type by_reference="false">\$nom</type>
+          </tag>
+          <tag line="233" name="var" description="Correspond à une rue à tester" type="\$rue">
+            <type by_reference="false">\$rue</type>
+          </tag>
+          <tag line="233" name="var" description="Correspond à une ville à tester" type="\$ville">
+            <type by_reference="false">\$ville</type>
+          </tag>
+          <tag line="233" name="var" description="Correspond à un code postale à tester" type="\$cp">
+            <type by_reference="false">\$cp</type>
+          </tag>
+          <tag line="233" name="var" description="Correspond à un email à tester" type="\$mail">
+            <type by_reference="false">\$mail</type>
+          </tag>
+          <tag line="233" name="covers" description="\fonction::getErreursSaisieCommande" refers="\fonction::getErreursSaisieCommande"/>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file test\util\fonctionTest.php</error>
+    </parse_markers>
+  </file>
+  <file path="util\class.pdoLafleur.inc.php" hash="996926d7d73fe33932e9036ca3e7c8bf" package="Default">
+    <class final="false" abstract="false" namespace="global" line="24" package="Default">
+      <extends/>
+      <name>PdoLafleur</name>
+      <full_name>\PdoLafleur</full_name>
+      <docblock line="21">
+        <description>Classe de fonctions PDO accedant à la base de données</description>
+        <long-description/>
+      </docblock>
+      <property final="false" static="true" visibility="private" line="30" namespace="global" package="Default">
+        <name>$serveur</name>
+        <default>'mysql:host=localhost'</default>
+        <docblock line="26">
+          <description>Variables de la classe PdoLaFleur</description>
+          <long-description/>
+          <tag line="26" name="param" description="Initialise le serveur de connexion à la base de données" type="\" variable="$serveur"/>
+        </docblock>
+      </property>
+      <property final="false" static="true" visibility="private" line="35" namespace="global" package="Default">
+        <name>$bdd</name>
+        <default>'dbname=lafleurnew'</default>
+        <docblock line="31">
+          <description>Variables de la classe PdoLaFleur</description>
+          <long-description/>
+          <tag line="31" name="param" description="Initialise le nom de la base de données" type="\" variable="$bdd"/>
+        </docblock>
+      </property>
+      <property final="false" static="true" visibility="private" line="40" namespace="global" package="Default">
+        <name>$user</name>
+        <default>'root'</default>
+        <docblock line="36">
+          <description>Variables de la classe PdoLaFleur</description>
+          <long-description/>
+          <tag line="36" name="param" description="Initialise le login de connexion à la base de données" type="\" variable="$user"/>
+        </docblock>
+      </property>
+      <property final="false" static="true" visibility="private" line="45" namespace="global" package="Default">
+        <name>$mdp</name>
+        <default>''</default>
+        <docblock line="41">
+          <description>Variables de la classe PdoLaFleur</description>
+          <long-description/>
+          <tag line="41" name="param" description="Initialise le mot de passe de connexion à la base de données" type="\" variable="$mdp"/>
+        </docblock>
+      </property>
+      <property final="false" static="true" visibility="private" line="50" namespace="global" package="Default">
+        <name>$monPdo</name>
+        <default/>
+        <docblock line="46">
+          <description>Variables de la classe PdoLaFleur</description>
+          <long-description/>
+          <tag line="46" name="param" description="Initialise la variable monPdo" type="\" variable="$monPdo"/>
+        </docblock>
+      </property>
+      <property final="false" static="true" visibility="private" line="55" namespace="global" package="Default">
+        <name>$monPdoLafleur</name>
+        <default>null</default>
+        <docblock line="51">
+          <description>Variables de la classe PdoLaFleur</description>
+          <long-description/>
+          <tag line="51" name="param" description="Initialise la variable monPdoLafleur" type="\" variable="$monPdoLafleur"/>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="60" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="56">
+          <description>Constructeur privé, crée l'instance de PDO qui sera sollicitée
+pour toutes les méthodes de la classe</description>
+          <long-description/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="70" package="Default">
+        <name>_destruct</name>
+        <full_name>_destruct</full_name>
+        <docblock line="66">
+          <description>Destructeur public, supprime l'instance de PDO qui était sollicitée
+pour toutes les méthodes de la classe</description>
+          <long-description/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="79" package="Default">
+        <name>getPdoLafleur</name>
+        <full_name>getPdoLafleur</full_name>
+        <docblock line="73">
+          <description>Fonction statique qui crée l'unique instance de la classe</description>
+          <long-description>&lt;p&gt;Appel : $instancePdolafleur = PdoLafleur::getPdoLafleur();&lt;/p&gt;</long-description>
+          <tag line="73" name="return" description="objet de la classe PdoLafleur" type="\l'unique">
+            <type by_reference="false">\l'unique</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="92" package="Default">
+        <name>getLesCategories</name>
+        <full_name>getLesCategories</full_name>
+        <docblock line="87">
+          <description>Retourne toutes les catégories sous forme d'un tableau associatif</description>
+          <long-description/>
+          <tag line="87" name="return" description="tableau associatif des catégories" type="\le">
+            <type by_reference="false">\le</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="108" package="Default">
+        <name>getLesProduitsDeCategorie</name>
+        <full_name>getLesProduitsDeCategorie</full_name>
+        <docblock line="100">
+          <description>Retourne sous forme d'un tableau associatif tous les produits de la
+catégorie passée en argument</description>
+          <long-description/>
+          <tag line="100" name="param" description="" type="\" variable="$idCategorie"/>
+          <tag line="100" name="return" description="tableau associatif" type="\un">
+            <type by_reference="false">\un</type>
+          </tag>
+        </docblock>
+        <argument line="108">
+          <name>$idCategorie</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="121" package="Default">
+        <name>getLesProduitsDuTableau</name>
+        <full_name>getLesProduitsDuTableau</full_name>
+        <docblock line="115">
+          <description>Retourne les produits concernés par le tableau des idProduits passée en argument</description>
+          <long-description/>
+          <tag line="115" name="param" description="tableau d'idProduits" type="\" variable="$desIdProduit"/>
+          <tag line="115" name="return" description="tableau associatif" type="\un">
+            <type by_reference="false">\un</type>
+          </tag>
+        </docblock>
+        <argument line="121">
+          <name>$desIdProduit</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="147" package="Default">
+        <name>creerCommande</name>
+        <full_name>creerCommande</full_name>
+        <docblock line="137">
+          <description>Crée une commande</description>
+          <long-description>&lt;p&gt;Crée une commande à partir des arguments validés passés en paramètre, l'identifiant est
+construit à partir du maximum existant ; crée les lignes de commandes dans la table contenir à partir du
+tableau d'idProduit passé en paramètre&lt;/p&gt;</long-description>
+          <tag line="137" name="param" description="" type="\" variable="$idClient"/>
+          <tag line="137" name="param" description="" type="\" variable="$lesIdProduit"/>
+          <tag line="137" name="param" description="" type="\" variable="$qte"/>
+        </docblock>
+        <argument line="147">
+          <name>$idClient</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="147">
+          <name>$lesIdProduit</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="147">
+          <name>$qte</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="180" package="Default">
+        <name>connexionAdmin</name>
+        <full_name>connexionAdmin</full_name>
+        <docblock line="171">
+          <description>Connecte un administrateur</description>
+          <long-description>&lt;p&gt;Crée une connexion d'un administrateur à partir des arguments validés passés en paramètre, la connexion est
+construit à partir d'identifiant et de mot de passe passer en paramètre.&lt;/p&gt;</long-description>
+          <tag line="171" name="param" description="" type="\" variable="$login"/>
+          <tag line="171" name="param" description="" type="\" variable="$motpasse"/>
+          <tag line="171" name="return" description="informations de l'adminisrtateur sous forme de tableau associatif ou 0." type="\les">
+            <type by_reference="false">\les</type>
+          </tag>
+        </docblock>
+        <argument line="180">
+          <name>$login</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="180">
+          <name>$motpasse</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="203" package="Default">
+        <name>connexionClients</name>
+        <full_name>connexionClients</full_name>
+        <docblock line="194">
+          <description>Connecte un client</description>
+          <long-description>&lt;p&gt;Crée une connexion d'un client à partir des arguments validés passés en paramètre, la connexion est
+construit à partir d'identifiant et de mot de passe passer en paramètre.&lt;/p&gt;</long-description>
+          <tag line="194" name="param" description="" type="\" variable="$login"/>
+          <tag line="194" name="param" description="" type="\" variable="$motpasse"/>
+          <tag line="194" name="return" description="informations du client sous forme de tableau associatif ou 0." type="\les">
+            <type by_reference="false">\les</type>
+          </tag>
+        </docblock>
+        <argument line="203">
+          <name>$login</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="203">
+          <name>$motpasse</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="225" package="Default">
+        <name>supprimerProduit</name>
+        <full_name>supprimerProduit</full_name>
+        <docblock line="217">
+          <description>Supprime un produit</description>
+          <long-description>&lt;p&gt;Supprime un produit de la base de données à partir d'un argument validés passés en paramètre,
+la suppression de l'image du produit est éffectué suivi de la suppresion du produit
+faite à partir de la référence produit passer en paramètre.&lt;/p&gt;</long-description>
+          <tag line="217" name="param" description="" type="\" variable="$ref"/>
+        </docblock>
+        <argument line="225">
+          <name>$ref</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="247" package="Default">
+        <name>ajouterProduit</name>
+        <full_name>ajouterProduit</full_name>
+        <docblock line="235">
+          <description>Ajoute un produit</description>
+          <long-description>&lt;p&gt;Ajoute un produit de la base de données à partir d'arguments validés passés en paramètre,
+l'ajout du produit est fait à partir de la référence, de la description, du prix,
+de la catégorie et de l'image du produit passer en paramètre.&lt;/p&gt;</long-description>
+          <tag line="235" name="param" description="" type="\" variable="$ref"/>
+          <tag line="235" name="param" description="" type="\" variable="$description"/>
+          <tag line="235" name="param" description="" type="\" variable="$prix"/>
+          <tag line="235" name="param" description="" type="\" variable="$cat"/>
+          <tag line="235" name="param" description="" type="\" variable="$image"/>
+        </docblock>
+        <argument line="247">
+          <name>$ref</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="247">
+          <name>$description</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="247">
+          <name>$prix</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="247">
+          <name>$cat</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="247">
+          <name>$image</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="266" package="Default">
+        <name>modifierProduit</name>
+        <full_name>modifierProduit</full_name>
+        <docblock line="253">
+          <description>Modifie les informations d'un produit</description>
+          <long-description>&lt;p&gt;Modifie les informations d'un produit de la base de données à partir d'arguments validés passés en paramètre,
+la modification du produit est faite à partir de la référence de produit suivi des nouvelles informations
+à ajouter à la base de données.&lt;/p&gt;</long-description>
+          <tag line="253" name="param" description="" type="\" variable="$refold"/>
+          <tag line="253" name="param" description="" type="\" variable="$ref"/>
+          <tag line="253" name="param" description="" type="\" variable="$description"/>
+          <tag line="253" name="param" description="" type="\" variable="$prix"/>
+          <tag line="253" name="param" description="" type="\" variable="$cat"/>
+          <tag line="253" name="param" description="" type="\" variable="$image"/>
+        </docblock>
+        <argument line="266">
+          <name>$refold</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="266">
+          <name>$ref</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="266">
+          <name>$description</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="266">
+          <name>$prix</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="266">
+          <name>$cat</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="266">
+          <name>$image</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="278" package="Default">
+        <name>afficherProduit</name>
+        <full_name>afficherProduit</full_name>
+        <docblock line="272">
+          <description>Affiche les informations de tous les produits</description>
+          <long-description>&lt;p&gt;Affiche les informations de tous les produits de la base de données.&lt;/p&gt;</long-description>
+          <tag line="272" name="return" description="informations des produits sous forme de tableau associatif." type="\les">
+            <type by_reference="false">\les</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="290" package="Default">
+        <name>afficherUnProduit</name>
+        <full_name>afficherUnProduit</full_name>
+        <docblock line="283">
+          <description>Affiche les informations d'un produit</description>
+          <long-description>&lt;p&gt;Affiche les informations d'un produit de la base de données à partir d'un argument validés passés en paramètre.&lt;/p&gt;</long-description>
+          <tag line="283" name="param" description="" type="\" variable="$ref"/>
+          <tag line="283" name="return" description="informations d'un produit sous forme de tableau associatif." type="\les">
+            <type by_reference="false">\les</type>
+          </tag>
+        </docblock>
+        <argument line="290">
+          <name>$ref</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="302" package="Default">
+        <name>afficherUnCompte</name>
+        <full_name>afficherUnCompte</full_name>
+        <docblock line="295">
+          <description>Affiche les informations d'un compte client</description>
+          <long-description>&lt;p&gt;Affiche les informations d'un client de la base de données à partir d'un argument validés passés en paramètre.&lt;/p&gt;</long-description>
+          <tag line="295" name="param" description="" type="\" variable="$login"/>
+          <tag line="295" name="return" description="informations d'un client sous forme de tableau associatif." type="\les">
+            <type by_reference="false">\les</type>
+          </tag>
+        </docblock>
+        <argument line="302">
+          <name>$login</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="315" package="Default">
+        <name>afficherCommande</name>
+        <full_name>afficherCommande</full_name>
+        <docblock line="307">
+          <description>Affiche les informations d'une commande d'un client</description>
+          <long-description>&lt;p&gt;Affiche les informations des commandes d'un client de la base de données à partir d'un argument
+validés passés en paramètre.&lt;/p&gt;</long-description>
+          <tag line="307" name="param" description="" type="\" variable="$idClient"/>
+          <tag line="307" name="return" description="informations des commandes d'un client sous forme de tableau associatif." type="\les">
+            <type by_reference="false">\les</type>
+          </tag>
+        </docblock>
+        <argument line="315">
+          <name>$idClient</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="337" package="Default">
+        <name>inscriptionClient</name>
+        <full_name>inscriptionClient</full_name>
+        <docblock line="320">
+          <description>Ajoute un client à la base de données</description>
+          <long-description>&lt;p&gt;Inscrit un client à la base de données à partir d'arguments validés passés en paramètre.
+l'ajout du client est fait à partir du login, du mot de passe, du nom, de l'adresse, du code postale,
+du téléphone, et de l'email du client passer en paramètre.
+Si le login du client existe déjà l'ajout n'est pas éffectué et la valeur 0 est retourné sinon
+l'ajout est éffectué et la valeur 1 est retourné.&lt;/p&gt;</long-description>
+          <tag line="320" name="param" description="" type="\" variable="$login"/>
+          <tag line="320" name="param" description="" type="\" variable="$mdp"/>
+          <tag line="320" name="param" description="" type="\" variable="$nom"/>
+          <tag line="320" name="param" description="" type="\" variable="$adresse"/>
+          <tag line="320" name="param" description="" type="\" variable="$cp"/>
+          <tag line="320" name="param" description="" type="\" variable="$tel"/>
+          <tag line="320" name="param" description="" type="\" variable="$email"/>
+          <tag line="320" name="return" description="ou 0" type="\1">
+            <type by_reference="false">\1</type>
+          </tag>
+        </docblock>
+        <argument line="337">
+          <name>$login</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="337">
+          <name>$mdp</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="337">
+          <name>$nom</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="337">
+          <name>$adresse</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="337">
+          <name>$cp</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="337">
+          <name>$tel</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="337">
+          <name>$email</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file util\class.pdoLafleur.inc.php</error>
+    </parse_markers>
+  </file>
+  <file path="util\fonctions.inc.php" hash="d630b8b7b7f633ba548f445bf8d3649d" package="Default">
+    <class final="false" abstract="false" namespace="global" line="16" package="Default">
+      <extends/>
+      <name>fonction</name>
+      <full_name>\fonction</full_name>
+      <docblock line="13">
+        <description>Classe de fonctions n'accédant pas à la base de données.</description>
+        <long-description/>
+      </docblock>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="24" package="Default">
+        <name>isConnecteAdmin</name>
+        <full_name>isConnecteAdmin</full_name>
+        <docblock line="18">
+          <description>Teste si l'administrateur est connecté</description>
+          <long-description>&lt;p&gt;Teste si l'administrateur est actuellement connecté grâce à la variable $_SESSION['admin']&lt;/p&gt;</long-description>
+          <tag line="18" name="return" description="$_SESSION['admin'] ou faux" type="\:">
+            <type by_reference="false">\:</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="39" package="Default">
+        <name>isConnecteClient</name>
+        <full_name>isConnecteClient</full_name>
+        <docblock line="33">
+          <description>Teste si le client est connecté</description>
+          <long-description>&lt;p&gt;Teste si le client est actuellement connecté grâce à la variable $_SESSION['client']&lt;/p&gt;</long-description>
+          <tag line="33" name="return" description="$_SESSION['client'] ou faux" type="\:">
+            <type by_reference="false">\:</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="54" package="Default">
+        <name>initPanier</name>
+        <full_name>initPanier</full_name>
+        <docblock line="48">
+          <description>Initialise le panier</description>
+          <long-description>&lt;p&gt;Crée une variable de type session dans le cas
+où elle n'existe pas&lt;/p&gt;</long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="66" package="Default">
+        <name>supprimerPanier</name>
+        <full_name>supprimerPanier</full_name>
+        <docblock line="61">
+          <description>Supprime le panier</description>
+          <long-description>&lt;p&gt;Supprime la variable de type session&lt;/p&gt;</long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="79" package="Default">
+        <name>ajouterAuPanier</name>
+        <full_name>ajouterAuPanier</full_name>
+        <docblock line="70">
+          <description>Ajoute un produit au panier</description>
+          <long-description>&lt;p&gt;Teste si l'identifiant du produit est déjà dans la variable session
+ajoute l'identifiant à la variable de type session dans le cas où
+où l'identifiant du produit n'a pas été trouvé&lt;/p&gt;</long-description>
+          <tag line="70" name="param" description=": identifiant de produit" type="\" variable="$idProduit"/>
+          <tag line="70" name="return" description="si le produit n'était pas dans la variable, faux sinon" type="\vrai">
+            <type by_reference="false">\vrai</type>
+          </tag>
+        </docblock>
+        <argument line="79">
+          <name>$idProduit</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="98" package="Default">
+        <name>getLesIdProduitsDuPanier</name>
+        <full_name>getLesIdProduitsDuPanier</full_name>
+        <docblock line="92">
+          <description>Retourne les produits du panier</description>
+          <long-description>&lt;p&gt;Retourne le tableau des identifiants de produit&lt;/p&gt;</long-description>
+          <tag line="92" name="return" description="le tableau" type="\:">
+            <type by_reference="false">\:</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="109" package="Default">
+        <name>nbProduitsDuPanier</name>
+        <full_name>nbProduitsDuPanier</full_name>
+        <docblock line="102">
+          <description>Retourne le nombre de produits du panier</description>
+          <long-description>&lt;p&gt;Teste si la variable de session existe
+et retourne le nombre d'éléments de la variable session&lt;/p&gt;</long-description>
+          <tag line="102" name="return" description="le nombre" type="\:">
+            <type by_reference="false">\:</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="126" package="Default">
+        <name>retirerDuPanier</name>
+        <full_name>retirerDuPanier</full_name>
+        <docblock line="118">
+          <description>Retire un de produits du panier</description>
+          <long-description>&lt;p&gt;Recherche l'index de l'idProduit dans la variable session
+et détruit la valeur à ce rang&lt;/p&gt;</long-description>
+          <tag line="118" name="param" description=": identifiant de produit" type="\" variable="$idProduit"/>
+        </docblock>
+        <argument line="126">
+          <name>$idProduit</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="138" package="Default">
+        <name>estUnCp</name>
+        <full_name>estUnCp</full_name>
+        <docblock line="131">
+          <description>Teste si une chaîne a un format de code postal</description>
+          <long-description>&lt;p&gt;Teste le nombre de caractères de la chaîne et le type entier (composé de chiffres)&lt;/p&gt;</long-description>
+          <tag line="131" name="param" description=": la chaîne testée" type="\" variable="$codePostal"/>
+          <tag line="131" name="return" description="vrai ou faux" type="\:">
+            <type by_reference="false">\:</type>
+          </tag>
+        </docblock>
+        <argument line="138">
+          <name>$codePostal</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="150" package="Default">
+        <name>estEntier</name>
+        <full_name>estEntier</full_name>
+        <docblock line="142">
+          <description>Teste si une chaîne est un entier</description>
+          <long-description>&lt;p&gt;Teste si la chaîne ne contient que des chiffres&lt;/p&gt;</long-description>
+          <tag line="142" name="param" description=": la chaîne testée" type="\" variable="$valeur"/>
+          <tag line="142" name="return" description="vrai ou faux" type="\:">
+            <type by_reference="false">\:</type>
+          </tag>
+        </docblock>
+        <argument line="150">
+          <name>$valeur</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="161" package="Default">
+        <name>estUnMail</name>
+        <full_name>estUnMail</full_name>
+        <docblock line="154">
+          <description>Teste si une chaîne a le format d'un mail</description>
+          <long-description>&lt;p&gt;Utilise les expressions régulières&lt;/p&gt;</long-description>
+          <tag line="154" name="param" description=": la chaîne testée" type="\" variable="$mail"/>
+          <tag line="154" name="return" description="vrai ou faux" type="\:">
+            <type by_reference="false">\:</type>
+          </tag>
+        </docblock>
+        <argument line="161">
+          <name>$mail</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="175" package="Default">
+        <name>getErreursSaisieCommande</name>
+        <full_name>getErreursSaisieCommande</full_name>
+        <docblock line="165">
+          <description>Retourne un tableau d'erreurs de saisie pour une commande</description>
+          <long-description/>
+          <tag line="165" name="param" description=": chaîne" type="\" variable="$nom"/>
+          <tag line="165" name="param" description=": chaîne" type="\" variable="$rue"/>
+          <tag line="165" name="param" description=": chaîne" type="\" variable="$ville"/>
+          <tag line="165" name="param" description=": chaîne" type="\" variable="$cp"/>
+          <tag line="165" name="param" description=": chaîne" type="\" variable="$mail"/>
+          <tag line="165" name="return" description="un tableau de chaînes d'erreurs" type="\:">
+            <type by_reference="false">\:</type>
+          </tag>
+        </docblock>
+        <argument line="175">
+          <name>$nom</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="175">
+          <name>$rue</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="175">
+          <name>$ville</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="175">
+          <name>$cp</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="175">
+          <name>$mail</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file util\fonctions.inc.php</error>
+    </parse_markers>
+  </file>
+  <file path="vues\v_accueil.php" hash="44929c6567e6806108eef632bddc9885" package="Default">
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file vues\v_accueil.php</error>
+    </parse_markers>
+  </file>
+  <file path="vues\v_admin.php" hash="a10668baadf87f7a6e6db5162167765c" package="Default">
+    <include line="13" type="Include" package="Default">
+      <name>vues/v_admin_ajouter.php</name>
+    </include>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file vues\v_admin.php</error>
+    </parse_markers>
+  </file>
+  <file path="vues\v_admin_ajouter.php" hash="a8dd80d5e7c787ca875ede8c2101b3a4" package="Default">
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file vues\v_admin_ajouter.php</error>
+    </parse_markers>
+  </file>
+  <file path="vues\v_admin_modifier.php" hash="5369fb60085d30c71646455d109a0487" package="Default">
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file vues\v_admin_modifier.php</error>
+    </parse_markers>
+  </file>
+  <file path="vues\v_bandeau.php" hash="7ae7ac2b719417381c18cc4d1f91ba68" package="Default">
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file vues\v_bandeau.php</error>
+    </parse_markers>
+  </file>
+  <file path="vues\v_categories.php" hash="0350985275889d8f9128fdb2d3ce52a1" package="Default">
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file vues\v_categories.php</error>
+    </parse_markers>
+  </file>
+  <file path="vues\v_clients.php" hash="fca1bc4863f6a4a4626c1941358e3003" package="Default">
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file vues\v_clients.php</error>
+    </parse_markers>
+  </file>
+  <file path="vues\v_commande.php" hash="ce0f9d4bdf54655ee3302e1b1b05b1ce" package="Default">
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file vues\v_commande.php</error>
+    </parse_markers>
+  </file>
+  <file path="vues\v_connexion.php" hash="8be88d40c5ea76426d850d93391452a2" package="Default">
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file vues\v_connexion.php</error>
+    </parse_markers>
+  </file>
+  <file path="vues\v_entete.php" hash="9d52749393434e1708c51911b88ad793" package="Default">
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file vues\v_entete.php</error>
+    </parse_markers>
+  </file>
+  <file path="vues\v_erreurs.php" hash="d645c6a087d65d6e4f4e6f2adf9bb9ca" package="Default">
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file vues\v_erreurs.php</error>
+    </parse_markers>
+  </file>
+  <file path="vues\v_message.php" hash="37da5b11f04398d7e18b94a6492196cf" package="Default">
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file vues\v_message.php</error>
+    </parse_markers>
+  </file>
+  <file path="vues\v_panier.php" hash="969696b927a764b91a91ac7ae3310389" package="Default">
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file vues\v_panier.php</error>
+    </parse_markers>
+  </file>
+  <file path="vues\v_pied.php" hash="0deb10a52049c1c2c8d59fa732b41978" package="Default">
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file vues\v_pied.php</error>
+    </parse_markers>
+  </file>
+  <file path="vues\v_produits.php" hash="312f41e74f1ebfdc99ea65ac9d635619" package="Default">
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file vues\v_produits.php</error>
+    </parse_markers>
+  </file>
+  <file path="vues\v_validCommande.php" hash="b587e04f49f775aec6ab00b4b927445c" package="Default">
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file vues\v_validCommande.php</error>
+    </parse_markers>
+  </file>
+  <package name="Default" full_name="Default"/>
+  <namespace name="global" full_name="global"/>
+  <marker count="3">todo</marker>
+  <marker count="0">fixme</marker>
+  <deprecated count="0"/>
+</project>

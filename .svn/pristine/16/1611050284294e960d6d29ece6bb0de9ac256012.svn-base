@@ -1,0 +1,104 @@
+<?php
+if(isset($_REQUEST['action']))
+{
+    $action = $_REQUEST['action'];
+    switch($action)
+    {
+        case 'ajoutProduit' :
+        {
+            $ref=$_POST['ref'];
+            $cat=$_POST['cat'];
+            $prix=$_POST['prix'];
+            $desc=$_POST['desc'];
+
+            if ($_FILES['image']['error']) 
+            {     
+                switch ($_FILES['image']['error'])
+               {     
+                    case 1: // UPLOAD_ERR_INI_SIZE     
+                        echo"Le fichier dépasse la limite autorisée par le serveur (fichier php.ini) !";     
+                        break;     
+                    case 2: // UPLOAD_ERR_FORM_SIZE     
+                        echo "Le fichier dépasse la limite autorisée dans le formulaire HTML !"; 
+                        break;     
+                    case 3: // UPLOAD_ERR_PARTIAL     
+                        echo "L'envoi du fichier a été interrompu pendant le transfert !";     
+                        break;     
+                    case 4: // UPLOAD_ERR_NO_FILE     
+                        echo "Le fichier que vous avez envoyé a une taille nulle !"; 
+                        break;     
+               }    
+            }else{      
+                $tmp_name = $_FILES["image"]["tmp_name"];
+                $dbname = "images/".$_FILES["image"]["name"];
+                $name = $_FILES["image"]["name"];
+                $destination = ROOT.'images/';   
+                move_uploaded_file($tmp_name, $destination.$name);
+                $pdo->ajouterProduit($ref, $desc, $prix, $cat, $dbname);
+            }
+            break;
+        }
+        case 'supprimerProduit' :
+        {
+            if(isset($_GET['ref']) && !empty($_GET['ref'])){
+                $pdt=$_GET['ref'];
+                $pdo->supprimerProduit($pdt);
+            }
+            break;
+        }
+        
+        case 'modifProduit' :
+        {
+            if(isset($_GET['ref']) && !empty($_GET['ref'])){
+                $pdt=$_GET['ref'];
+                $leProduit = $pdo->afficherUnProduit($pdt);
+                include("vues/v_admin_modifier.php");
+            }
+            break;
+        }
+        
+        case 'modifierProduit' :
+        {
+            $refold=$_GET['refold'];
+            $ref=$_POST['ref'];
+            $cat=$_POST['cat'];
+            $prix=$_POST['prix'];
+            $desc=$_POST['desc'];
+
+            if ($_FILES['image']['error']) 
+            {     
+                switch ($_FILES['image']['error'])
+               {     
+                    case 1: // UPLOAD_ERR_INI_SIZE     
+                        echo"Le fichier dépasse la limite autorisée par le serveur (fichier php.ini) !";     
+                        break;     
+                    case 2: // UPLOAD_ERR_FORM_SIZE     
+                        echo "Le fichier dépasse la limite autorisée dans le formulaire HTML !"; 
+                        break;     
+                    case 3: // UPLOAD_ERR_PARTIAL     
+                        echo "L'envoi du fichier a été interrompu pendant le transfert !";     
+                        break;     
+                    case 4: // UPLOAD_ERR_NO_FILE     
+                        echo "Le fichier que vous avez envoyé a une taille nulle !"; 
+                        break;     
+               }    
+            }else{      
+                $tmp_name = $_FILES["image"]["tmp_name"];
+                $dbname = "images/".$_FILES["image"]["name"];
+                $name = $_FILES["image"]["name"];
+                $destination = ROOT.'images/';   
+                move_uploaded_file($tmp_name, $destination.$name);
+                $pdo->modifierProduit($refold, $ref, $desc, $prix, $cat, $dbname);
+            }
+            break;
+        }
+        default:{
+            include("vues/v_admin_ajouter.php");
+            break;
+        }
+    }
+}else{
+     $produit = $pdo->afficherProduit();
+     include("vues/v_admin.php");
+}
+?>

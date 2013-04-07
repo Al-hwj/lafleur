@@ -1,0 +1,36 @@
+<?php
+if(isset($_REQUEST['action']))
+{
+    $action = $_REQUEST['action'];
+    switch($action)
+    {
+       case 'afficherCompte' :
+        {
+           $information = $pdo->afficherUnCompte($_SESSION['client']);
+           $desIdProduit = fonction::getLesIdProduitsDuPanier();
+           $lesProduitsDuPanier = $pdo->getLesProduitsDuTableau($desIdProduit);
+           include("vues/v_validCommande.php");
+           break;
+        }
+        
+        case 'passerCommande' :
+        {
+                $information = $pdo->afficherUnCompte($_SESSION['client']);
+                //on enregistre dans la base de donné les informations de l'utilisateur avec la fonction creerCommande
+                $lesIdProduit = fonction::getLesIdProduitsDuPanier();
+                $pdo->creerCommande($information[0]->clt_id,$lesIdProduit);
+                $message = "Commande enregistrée";
+                fonction::supprimerPanier();
+                //La fonction supprimerPanier permet de tout supprimer les session du panier
+                include ("vues/v_message.php");
+            break;
+        }
+    }
+}
+else
+{
+    $information = $pdo->afficherUnCompte($_SESSION['client']);
+    $commande = $pdo->afficherCommande($_SESSION['client']);
+    include("vues/v_clients.php");
+}
+?>

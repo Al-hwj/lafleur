@@ -1,0 +1,27 @@
+<?php
+    /**
+    * Header content
+    *
+    * @author  My name
+    *
+    * @since 1.0.0
+    */
+?>
+<!DOCTYPE html>
+<html lang="fr" class="no-js"> 
+<?php
+include ("vues/v_admin_ajouter.php");
+?> <table border='1'> <?php
+foreach ($produit as $p):
+?>
+<tr>
+   <td><img src="<?php echo $p->pdt_image ?>" alt=image width="130" height="100"/></td>
+   <td>Reference : <?php echo $p->pdt_ref ?><br>
+   Categorie : <?php echo $p->pdt_categorie ?><br>
+   Description : <?php echo $p->pdt_designation ?><br></td>
+   <td>Prix : <?php echo $p->pdt_prix." Euros" ?></td>
+   <td><a href ="/lafleur/index.php?uc=admin&action=modifProduit&ref=<?php echo $p->pdt_ref?>"/><img src="images/modif.gif" alt=image/></a></td>
+   <td><a href ="/lafleur/index.php?uc=admin&action=supprimerProduit&ref=<?php echo $p->pdt_ref?>"/><img src="images/suppr.png" alt=image/></a></td>
+</tr>
+<?php endforeach; ?>
+</table>

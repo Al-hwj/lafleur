@@ -1,0 +1,230 @@
+﻿<?php
+/** 
+ * Classe d'accès aux données. 
+ 
+ * Utilise les services de la classe PDO
+ * pour l'application lafleur
+ * Les attributs sont tous statiques,
+ * les 4 premiers pour la connexion
+ * $monPdo de type PDO 
+ * $monPdoGsb qui contiendra l'unique instance de la classe
+ *
+ * @package default
+ * @author Patrice Grand
+ * @version    1.0
+ * @link       http://www.php.net/manual/fr/book.pdo.php
+ */
+
+class PdoLafleur
+{   		
+      	private static $serveur='mysql:host=localhost';
+      	private static $bdd='dbname=lafleurnew';   		
+      	private static $user='root' ;    		
+      	private static $mdp='' ;	
+		private static $monPdo;
+		private static $monPdoLafleur = null;
+/**
+ * Constructeur privé, crée l'instance de PDO qui sera sollicitée
+ * pour toutes les méthodes de la classe
+ */				
+	private function __construct()
+	{
+    		PdoLafleur::$monPdo = new PDO(PdoLafleur::$serveur.';'.PdoLafleur::$bdd, PdoLafleur::$user, PdoLafleur::$mdp); 
+			PdoLafleur::$monPdo->query("SET CHARACTER SET utf8");
+	}
+	public function _destruct(){
+		PdoLafleur::$monPdo = null;
+	}
+/**
+ * Fonction statique qui crée l'unique instance de la classe
+ *
+ * Appel : $instancePdolafleur = PdoLafleur::getPdoLafleur();
+ * @return l'unique objet de la classe PdoLafleur
+ */
+	public  static function getPdoLafleur()
+	{
+		if(PdoLafleur::$monPdoLafleur == null)
+		{
+			PdoLafleur::$monPdoLafleur= new PdoLafleur();
+		}
+		return PdoLafleur::$monPdoLafleur;  
+	}
+/**
+ * Retourne toutes les catégories sous forme d'un tableau associatif
+ *
+ * @return le tableau associatif des catégories 
+*/
+	public function getLesCategories()
+	{
+		$req = "select * from categorie";
+		$res = PdoLafleur::$monPdo->query($req);
+		$lesLignes = $res->fetchAll();
+		return $lesLignes;
+	}
+
+/**
+ * Retourne sous forme d'un tableau associatif tous les produits de la
+ * catégorie passée en argument
+ * 
+ * @param $idCategorie 
+ * @return un tableau associatif  
+*/
+
+	public function getLesProduitsDeCategorie($idCategorie)
+	{
+	    $req="select * from produits where pdt_categorie = '$idCategorie'";
+		$res = PdoLafleur::$monPdo->query($req);
+		$lesLignes = $res->fetchAll();
+		return $lesLignes; 
+	}
+/**
+ * Retourne les produits concernés par le tableau des idProduits passée en argument
+ *
+ * @param $desIdProduit tableau d'idProduits
+ * @return un tableau associatif 
+*/
+	public function getLesProduitsDuTableau($desIdProduit)
+	{
+		$nbProduits = count($desIdProduit);
+		$lesProduits=array();
+		if($nbProduits != 0)
+		{
+			foreach($desIdProduit as $unIdProduit)
+			{
+				$req = "select * from produits where pdt_ref = '$unIdProduit'";
+				$res = PdoLafleur::$monPdo->query($req);
+				$unProduit = $res->fetch();
+				$lesProduits[] = $unProduit;
+			}
+		}
+		return $lesProduits;
+	}
+/**
+ * Crée une commande 
+ *
+ * Crée une commande à partir des arguments validés passés en paramètre, l'identifiant est
+ * construit à partir du maximum existant ; crée les lignes de commandes dans la table contenir à partir du
+ * tableau d'idProduit passé en paramètre
+ * @param $nom 
+ * @param $rue
+ * @param $cp
+ * @param $ville
+ * @param $mail
+ * @param $lesIdProduit
+ 
+*/
+	public function creerCommande($idClient,$lesIdProduit)
+	{
+		$req = "select max(c_id) as maxi from commande";
+		//echo $req."<br>";
+		$res = PdoLafleur::$monPdo->query($req)->fetchAll(PDO::FETCH_OBJ);
+                $maxi = $res[0]->maxi; 
+		$maxi++;
+		$idCommande = $maxi;
+		//echo $idCommande."<br>";
+		//echo $maxi."<br>";
+		$date = date('Y/m/d');
+		$req = "insert into commande values ('$idCommande', '$date')";
+		//echo $req."<br>";
+		$res = PdoLafleur::$monPdo->exec($req);
+		foreach($lesIdProduit as $unIdProduit)
+		{
+			$req = "insert into contenucommande values ('$idCommande', '$idClient','$unIdProduit', '1')";
+			//echo $req."<br>";
+			$res = PdoLafleur::$monPdo->exec($req);
+		}
+		
+	
+	}
+        
+        public function connexionAdmin($login, $motpasse)
+	{
+		$req = "SELECT * FROM administrateur WHERE a_login='$login' and a_mdp='$motpasse'";
+		$res = PdoLafleur::$monPdo->query($req)->fetchAll(PDO::FETCH_ASSOC);
+                if($res != NULL)
+                {
+                    return $res[0];
+                }
+                else
+                {
+                    return (0);
+                }
+	}
+        
+        public function connexionClients($login, $motpasse)
+        {
+            $req = "SELECT * FROM clients WHERE clt_login='$login' and clt_mdp='$motpasse'";
+		$res = PdoLafleur::$monPdo->query($req)->fetchAll(PDO::FETCH_ASSOC);
+                if($res != NULL)
+                {
+                    return $res[0];
+                }
+                else
+                {
+                    return (0);
+                }
+        }
+        
+        public function supprimerProduit($ref){
+            $a="SELECT pdt_image FROM produits WHERE pdt_ref='$ref'";
+            $res = PdoLafleur::$monPdo->query($a);
+            $lignes = $res->fetch();
+            unlink($lignes[0]);
+            $b="DELETE FROM produits WHERE pdt_ref='$ref'";
+            $result2= PdoLafleur::$monPdo->exec($b);
+            header('Location: '.HOME.'index.php?uc=admin');
+        }
+        
+        public function ajouterProduit($ref,$description,$prix,$cat,$image){
+            $a="Insert Into produits Values ('$ref','$description','$prix','$image','$cat')";
+            PdoLafleur::$monPdo->exec($a);
+            header('Location: '.HOME.'index.php?uc=admin');
+        }
+        
+        public function modifierProduit($refold,$ref,$description,$prix,$cat,$image){
+            $a="Update produit SET pdt_ref='$ref', pdt_designation='$description', pdt_prix='$prix', pdt_image='$image', pdt_categorie='$cat' WHERE pdt_ref='$refold'";
+            PdoLafleur::$monPdo->exec($a);
+            header('Location: '.HOME.'index.php?uc=admin');
+        }
+        
+        public function afficherProduit(){
+            $a="SELECT * FROM produits";
+            return PdoLafleur::$monPdo->query($a)->fetchAll(PDO::FETCH_OBJ);
+        }
+        
+        public function afficherUnProduit($ref){
+            $a="Select * FROM produit where pdt_ref ='$ref'";
+            return PdoLafleur::$monPdo->query($a)->fetchAll(PDO::FETCH_OBJ);
+        }
+        
+        public function afficherUnCompte($login){
+            $a="Select * from clients where clt_login = '$login'";
+            return PdoLafleur::$monPdo->query($a)->fetchAll(PDO::FETCH_OBJ);
+        }
+        
+        public function afficherCommande($idclient){
+            $a="Select cc_produit, cc_quantite, c_date from contenucommande, commande where c_id = cc_id and cc_cltid=(Select clt_id from clients where clt_login='$idclient')";
+            return PdoLafleur::$monPdo->query($a)->fetchAll(PDO::FETCH_OBJ);
+        }
+        public function  inscriptionClient($login,$mdp,$nom,$adresse,$cp,$tel,$email)
+        {
+            $a="Select max(clt_id) as maxi from clients";
+            $resultat = PdoLafleur::$monPdo->query($a)->fetchAll(PDO::FETCH_OBJ);
+            $result = $resultat[0]->maxi;
+            $result++;
+            $b="Select clt_login from clients where clt_login='$login'";
+            $resultat2 = PdoLafleur::$monPdo->query($b)->fetchAll(PDO::FETCH_OBJ);
+            if($resultat2 == NULL)
+            {
+                $c="Insert into clients values ($result,'$login','$mdp','$nom','$adresse','$cp','$tel','$email')";
+                PdoLafleur::$monPdo->exec($c);
+                $resultat3=1;
+            }
+            else
+            {
+                $resultat3=0;
+            }
+            return($resultat3);
+        }
+ }
+?>

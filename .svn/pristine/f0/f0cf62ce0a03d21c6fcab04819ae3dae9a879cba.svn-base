@@ -1,0 +1,32 @@
+<img src="images/panier.png" style="height:100px;"alt="Panier" title="panier"/><br>
+<?php
+//affichage des produits
+$total = 0;
+foreach( $lesProduitsDuPanier as $unProduit) 
+{
+	$id = $unProduit['pdt_ref'];
+	$description = $unProduit['pdt_designation'];
+	$image = $unProduit['pdt_image'];
+	$prix = $unProduit['pdt_prix'];
+        $total = $total + $prix;
+	
+	?>
+	<p>
+	<img src="<?php echo $image ?>" alt=image width=130	height=100 />
+	<?php
+		echo	$description."($prix Euros)";
+	?>	
+	<a href="index.php?uc=gererPanier&produit=<?php echo $id ?>&action=supprimerUnProduit" onclick="return confirm('Voulez-vous vraiment retirer cet article de votre panier ?');">
+	<img src="images/retirerpanier.png" TITLE="Retirer du panier" ></a>
+	
+	
+	</p>
+	<?php
+}
+echo "<div align='center'>";
+echo "Prix total : ".$total." Euros<br>";
+echo "Frais de livraison : Offert<br>";
+?>
+<br>
+<a href=index.php?uc=gererPanier&action=passerCommande><img src="images/commander.jpg" TITLE="Passer commande" ></a>
+</div>
