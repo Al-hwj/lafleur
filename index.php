@@ -10,6 +10,7 @@
 <!DOCTYPE html>
 <html lang="fr" class="no-js"> 
 <?php
+ini_set('display_errors', 1);
 require_once("util/fonctions.inc.php");
 require_once("util/class.pdoLafleur.inc.php");
 /**
