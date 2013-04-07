@@ -27,22 +27,22 @@ class PdoLafleur
  * Variables de la classe PdoLaFleur
  * @param $serveur Initialise le serveur de connexion à la base de données
  */
-      	private static $serveur='eu-cdbr-azure-north-a.cloudapp.net';
+      	private static $serveur='Data Source=eu-cdbr-azure-north-a.cloudapp.net';
 /**
  * Variables de la classe PdoLaFleur
  * @param $bdd Initialise le nom de la base de données
  */
-      	private static $bdd='dbname=lafleurnew';
+      	private static $bdd='Database=lafleurnew';
 /**
  * Variables de la classe PdoLaFleur
  * @param $user Initialise le login de connexion à la base de données
  */        
-      	private static $user='b78fae527c28f2' ;  
+      	private static $user='User Id=b78fae527c28f2' ;  
 /**
  * Variables de la classe PdoLaFleur
  * @param $mdp Initialise le mot de passe de connexion à la base de données
  */        
-      	private static $mdp='3ce67dcc' ;	
+      	private static $mdp='Password=3ce67dcc' ;	
  /**
  * Variables de la classe PdoLaFleur
  * @param $monPdo Initialise la variable monPdo
