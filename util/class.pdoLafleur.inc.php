@@ -27,7 +27,7 @@ class PdoLafleur
  * Variables de la classe PdoLaFleur
  * @param $serveur Initialise le serveur de connexion à la base de données
  */
-      	private static $serveur='mysql:host=localhost';
+      	private static $serveur='';
 /**
  * Variables de la classe PdoLaFleur
  * @param $bdd Initialise le nom de la base de données
@@ -37,7 +37,7 @@ class PdoLafleur
  * Variables de la classe PdoLaFleur
  * @param $user Initialise le login de connexion à la base de données
  */        
-      	private static $user='root' ;  
+      	private static $user='' ;  
 /**
  * Variables de la classe PdoLaFleur
  * @param $mdp Initialise le mot de passe de connexion à la base de données
