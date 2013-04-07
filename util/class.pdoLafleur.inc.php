@@ -27,7 +27,7 @@ class PdoLafleur
  * Variables de la classe PdoLaFleur
  * @param $serveur Initialise le serveur de connexion à la base de données
  */
-      	private static $serveur='host=eu-cdbr-azure-north-a.cloudapp.net';
+      	private static $serveur='eu-cdbr-azure-north-a.cloudapp.net';
 /**
  * Variables de la classe PdoLaFleur
  * @param $bdd Initialise le nom de la base de données

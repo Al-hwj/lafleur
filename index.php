@@ -34,7 +34,7 @@ $pdo = PdoLafleur::getPdoLafleur();
 switch($uc)
 {
 	case 'accueil':
-		{include(HOME."vues/v_accueil.php");break;}
+		{include("vues/v_accueil.php");break;}
 	case 'voirProduits' :
 		{include("controleurs/c_voirProduits.php");break;}
 	case 'gererPanier' :
